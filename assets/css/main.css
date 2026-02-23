@@ -8766,3 +8766,58 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
+
+/* =========================================
+   Custom About + Problem Layout Fix
+   ========================================= */
+
+/* --- DESKTOP --- */
+
+.custom-spotlight .image img {
+    object-fit: contain !important;   /* prevent cropping */
+    width: 100% !important;
+    height: auto !important;
+}
+
+.custom-spotlight .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Remove forced height from Story */
+.custom-spotlight {
+    min-height: auto !important;
+}
+
+
+/* =========================================
+   MOBILE LAYOUT
+   ========================================= */
+
+@media screen and (max-width: 736px) {
+
+    .custom-spotlight {
+        flex-direction: column !important;
+        text-align: left;
+    }
+
+    /* TEXT FIRST */
+    .custom-spotlight .content {
+        order: 1 !important;
+        padding: 2rem 1.5rem !important;
+    }
+
+    /* IMAGE SECOND */
+    .custom-spotlight .image {
+        order: 2 !important;
+        width: 100% !important;
+        margin: 1rem 0 !important;
+    }
+
+    .custom-spotlight .image img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
