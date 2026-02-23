@@ -8602,17 +8602,112 @@ input, select, textarea {
 				box-shadow: none !important;
 			}
 
-					/* Custom full-width banner */
-		#banner {
-			width: 100%;
-			height: 100vh; /* adjust height here */
-			background-image: url("../../images/00a_banner_high.jpg");
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
+/* =====================================
+   Cinematic Banner – Text + Logo Layout
+   ===================================== */
 
+#banner {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    background-image: url("../../images/00a_banner2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
-		}
+/* Overlay */
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Inner layout */
+.banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Text block */
+.banner-text {
+    color: white;
+}
+
+.banner-text h1 {
+    font-size: 96px;
+    line-height: 1;
+    margin: 0;
+    font-weight: 700;
+}
+
+.banner-text h2 {
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Logo */
+.banner-logo-wrapper img {
+    max-height: 140px;
+    width: auto;
+}
+
+/* =========================
+   Responsive adjustments
+   ========================= */
+
+@media screen and (max-width: 980px) {
+
+    .banner-text h1 {
+        font-size: 64px;
+    }
+
+    .banner-text h2 {
+        font-size: 18px;
+    }
+
+    .banner-logo-wrapper img {
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .banner-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .banner-text h1 {
+        font-size: 42px;
+    }
+
+    .banner-text h2 {
+        font-size: 14px;
+        letter-spacing: 0.15em;
+    }
+
+    .banner-logo-wrapper img {
+        max-height: 80px;
+    }
+
+    #banner {
+        height: 60vh;
+        min-height: 400px;
+    }
+}
 
 
 /* Taller only for first two spotlight sections */
@@ -8643,53 +8738,4 @@ section.spotlight.orient-left .content {
     width: 100%;
     height: 100%;
     object-fit: cover;  /* Ensures consistent cropping */
-}
-
-/* =========================================
-   STORY TEMPLATE – CUSTOM BANNER FIX
-   ========================================= */
-
-#banner {
-    width: 100%;
-    height: 65vh;
-    background-image: url("../../images/00a_banner_high.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-/* Mobile override */
-@media screen and (max-width: 736px) {
-    #banner {
-        height: auto !important;
-        aspect-ratio: 16 / 9;
-        background-size: contain !important;
-        background-position: center top !important;
-        background-color: #000;
-    }
-}
-
-/* =========================================
-   STORY TEMPLATE – SPOTLIGHT MOBILE FIX
-   ========================================= */
-
-@media screen and (max-width: 736px) {
-
-    section.spotlight {
-        min-height: auto !important;
-    }
-
-    section.spotlight .image {
-        height: 240px;
-    }
-
-    section.spotlight .image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    section.spotlight .content {
-        padding: 2rem 1.5rem !important;
-    }
 }
