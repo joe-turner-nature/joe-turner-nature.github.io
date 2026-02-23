@@ -8644,3 +8644,40 @@ section.spotlight.orient-left .content {
     height: 100%;
     object-fit: cover;  /* Ensures consistent cropping */
 }
+
+/* Mobile banner fix */
+@media screen and (max-width: 736px) {
+    #banner {
+        height: 40vh;              /* shorter on mobile */
+        background-size: contain;  /* show full image */
+        background-position: center top;
+        background-color: #000;    /* fallback behind image */
+    }
+}
+
+/* Improve Spotlight layout on mobile */
+@media screen and (max-width: 736px) {
+
+    section.spotlight {
+        min-height: auto;
+    }
+
+    section.spotlight .image {
+        width: 100%;
+        height: 250px;          /* controlled mobile height */
+    }
+
+    section.spotlight .image img {
+        object-fit: cover;
+    }
+
+    section.spotlight .content {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    section.spotlight {
+        flex-direction: column-reverse;
+    }
+}
