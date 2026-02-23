@@ -8684,14 +8684,23 @@ input, select, textarea {
 
 @media screen and (max-width: 736px) {
 
+     #banner {
+        height: 65vh;
+        min-height: 420px;
+        padding: 2rem 1.5rem;
+    }
+
     .banner-inner {
-        flex-direction: column;
+        flex-direction: column;      /* STACK */
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .banner-text h1 {
         font-size: 42px;
+        line-height: 1.1;
     }
 
     .banner-text h2 {
@@ -8701,11 +8710,6 @@ input, select, textarea {
 
     .banner-logo-wrapper img {
         max-height: 80px;
-    }
-
-    #banner {
-        height: 60vh;
-        min-height: 400px;
     }
 }
 
