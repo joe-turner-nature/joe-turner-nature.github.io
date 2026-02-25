@@ -8660,8 +8660,15 @@ input, select, textarea {
 
 /* Hidden visually but readable by Google and screen readers */
 .seo-text {
-    position: absolute;
-    left: -9999px;
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .banner-text h2 {
