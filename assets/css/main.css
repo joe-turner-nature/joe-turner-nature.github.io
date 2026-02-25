@@ -8652,6 +8652,24 @@ input, select, textarea {
 	color: #ffffff;
 }
 
+.hero-heading {
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.hero-name {
+    font-size: 110px;
+    display: block;
+}
+
+/* Hidden visually but readable by Google and screen readers */
+.seo-text {
+    position: absolute;
+    left: -9999px;
+}
+
 .banner-text h2 {
     font-size: 18px;
     letter-spacing: 0.2em;
