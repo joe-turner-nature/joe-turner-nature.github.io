@@ -8644,7 +8644,13 @@ input, select, textarea {
     color: #ffffff;
 }
 
-
+.banner-text h1 {
+    font-size: 110px;
+    line-height: 1;
+    margin: 0;
+    font-weight: 400;
+	color: #ffffff;
+}
 
 .hero-heading {
     margin: 0;
